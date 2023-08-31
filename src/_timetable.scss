@@ -1,0 +1,83 @@
+.timetable {
+    font-family: var(--font-family-ru);
+    --size: 48px;
+    margin: auto;
+    display: grid;
+    gap: .5em;
+
+    &__week-list {
+        display: grid;
+        gap: .5em;
+    }
+
+    &__day-name-list {
+        display: grid;
+        grid-template-columns: repeat(7, var(--size));
+        gap: .5em;
+        text-align: center;
+
+        & *:last-of-type {
+            color: hsl(0, 40%, 40%);
+        }
+    }
+
+    &__week {
+        display: grid;
+        grid-template-columns: repeat(7, var(--size));
+        gap: .5em;
+    }
+
+    &__day {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: var(--size);
+        position: relative;
+
+        &.has-lessons {
+            
+            background-color: var(--clr-highlight);
+        }
+
+        &.no-lessons {
+            color: var(--clr-subtext);
+        }
+
+        &:last-of-type {
+            color: hsl(0, 40%, 40%);
+        }
+
+        &__lessons {
+            position: absolute;
+            bottom: 6px;
+            display: flex;
+            gap: 4px;
+
+            .lesson {
+                width: 6px;
+                height: 6px;
+                border-radius: 6px;
+                background-color: var(--clr-subtext);
+
+                &::after {
+                    position: absolute;
+                    content: attr(data-subject);
+                    background-color: var(--clr-bg);
+                    border: 1px solid var(--clr-border);
+                    display: none;
+                    width: max-content;
+                    translate: 2px -100%;
+                    padding: 2px 4px;
+                }
+
+                &:hover {
+                    &::after {
+                        display: block;
+                        z-index: 10000;
+                    }
+                }
+            }
+        }
+    }
+}

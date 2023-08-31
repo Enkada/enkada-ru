@@ -17,7 +17,6 @@ export function UserContextProvider({children}) {
                 }
                 else {
                     setIsEditor(true);
-                    console.log("setIsEditor(true)");
                 }
 
                 setReady(true);

@@ -1,0 +1,93 @@
+
+.timeline {
+    --gap: 16px;
+    //padding: 16px;
+
+    .year {
+        display: grid;
+        grid-template-columns: 44px auto;   
+        
+        &__number {
+            font-size: 1.25em;
+            height: fit-content;
+            translate: 0 -50%; 
+        }
+
+        &__month-list {            
+
+            .month {
+                display: grid;
+                grid-template-columns: 120px 20px auto;
+                position: relative;  
+
+                &:first-child {
+                    .month__name {    
+    
+                        &::after {
+                            height: 4px;
+                        }
+                    }
+                }
+
+                .marker {
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background-color: var(--clr-event);
+                    left: 115px;
+                    z-index: 1000;
+                }
+                
+                &__name {
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    translate: 25px -20px;     
+
+                    &::after {
+                        content: "";
+                        width: 30px;
+                        background-color: var(--clr-border);
+                        height: 2px;
+                        z-index: -1;
+                        display: inline-block;
+                    }
+                }
+
+                &__line {
+                    background-color: var(--clr-bg);
+                    min-height: 40px;
+                }
+
+                &__event-list {
+        
+                    .event {
+                        translate: 15px -50%;  
+                        display: flex;
+                        align-items: center;
+        
+                        &__day {
+                            margin-right: 8px;
+                            width: 20px;
+                            text-align: right;
+                            color: var(--clr-event);
+                        }
+                    }
+                }
+
+                &.no-events {
+                    color: var(--clr-subtext);
+
+                    .month__line {
+                        background-color: var(--clr-highlight);
+                    }
+                }
+            }
+        }
+
+
+        &:nth-child(2n) {
+        }
+    }
+}

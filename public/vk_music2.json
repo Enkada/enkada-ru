@@ -1,0 +1,593 @@
+[
+    {
+        "title": "Onegai Muscle",
+        "author": "Eurobeat remix",
+        "duration": 262
+    },
+    {
+        "title": "Dark Gates Ov R&#39;lyeh",
+        "author": "Dav Dralleon",
+        "duration": 269,
+        "cover": "https://sun9-67.userapi.com/impf/iwXnW27hrXODRp9AuGjOMvI79oJqoLVFOS_1AQ/s_SIisCfi0E.jpg?size=80x80&quality=96&sign=66bf7fcbed114354443902bbbf9922b5&type=audio"
+    },
+    {
+        "title": "Aversion",
+        "author": "CLOZVRE",
+        "duration": 234
+    },
+    {
+        "title": "I AM A GOD",
+        "author": "HOTCALLER X TMRRW",
+        "duration": 171
+    },
+    {
+        "title": "Raining Blood",
+        "author": " Slayer",
+        "duration": 225,
+        "subtitle": "Hotcaller Remix"
+    },
+    {
+        "title": "Technokids",
+        "author": "aUtOdiDakT",
+        "duration": 206,
+        "cover": "https://sun9-4.userapi.com/impf/c858224/v858224976/239730/7PxRJ59obnU.jpg?size=80x80&quality=96&sign=4431523c2c0287c715aaa7e86e156dc9&type=audio",
+        "subtitle": "Hotcaller & CUSTOME Remix"
+    },
+    {
+        "title": "Feel The Bounce",
+        "author": "MrKoolTrix",
+        "duration": 245,
+        "cover": "https://sun9-25.userapi.com/impf/cbQ2Q3CrXhe74wWGCwdwtAOi7CeU-2HNZ16WTw/t9rIsxsBq1s.jpg?size=80x80&quality=96&sign=cf62c4dc3e61be60750ecb1d7fd8b7b4&type=audio"
+    },
+    {
+        "title": "Were-In&#39;",
+        "author": "MrKoolTrix",
+        "duration": 182,
+        "cover": "https://sun9-67.userapi.com/impf/qcYIU59l8i-RmI8DQVnSJPiwVMVIP9TUY0r3XQ/u3529OetWtw.jpg?size=80x80&quality=96&sign=c09d68771ca3a0c858148aaf010799e3&type=audio"
+    },
+    {
+        "title": "Riptide Rhythm",
+        "author": "MrKoolTrix",
+        "duration": 256
+    },
+    {
+        "title": "Dead Spell",
+        "author": "EVILNET",
+        "duration": 213
+    },
+    {
+        "title": "Город Омск",
+        "author": "Смешарики, Александр Шпынев, Сергей Мардарь, Марина Ланда, Антон Виноградов",
+        "duration": 120,
+        "isRussian": true,
+        "cover": "https://sun9-74.userapi.com/impf/i65jR7957Ma2Bpdw_hG4aJA30ws4Xq5CohdrzQ/pzaEGBe-IVQ.jpg?size=80x80&quality=96&sign=4d59aaced5191ecad2c8b5abaaf32faa&type=audio",
+        "subtitle": "Remix"
+    },
+    {
+        "title": "Обормот",
+        "author": "Смешарики, Марина Ланда, Сергей Мардарь",
+        "duration": 129,
+        "isRussian": true,
+        "cover": "https://sun9-74.userapi.com/impf/i65jR7957Ma2Bpdw_hG4aJA30ws4Xq5CohdrzQ/pzaEGBe-IVQ.jpg?size=80x80&quality=96&sign=4d59aaced5191ecad2c8b5abaaf32faa&type=audio",
+        "subtitle": "Remix"
+    },
+    {
+        "title": "Crysta",
+        "author": "Wisp X",
+        "duration": 241
+    },
+    {
+        "title": "Acceptance",
+        "author": "Wisp X",
+        "duration": 1008
+    },
+    {
+        "title": "Exit Music",
+        "author": "Radiohead",
+        "duration": 267,
+        "cover": "https://sun9-7.userapi.com/impf/c849528/v849528644/a34a7/GXiuoLGJOlc.jpg?size=80x80&quality=96&sign=2dbb233590aac6077a6ded746614842f&type=audio",
+        "subtitle": "For A Film"
+    },
+    {
+        "title": "Bloody Sunday",
+        "author": "Mauro Rawn",
+        "duration": 161,
+        "cover": "https://sun9-74.userapi.com/impf/JT_5-ZGkSMim0YLbseA6X9PsHxM6XOzxhKWfEg/HTCn5xsxoE8.jpg?size=80x80&quality=96&sign=d7f175fa9029a5cb465d02efe21bb502&type=audio"
+    },
+    {
+        "title": "Bing &amp; Abi",
+        "author": "Stephen McKeon",
+        "duration": 400
+    },
+    {
+        "title": "Threw It Away",
+        "author": "Graham Coxon",
+        "duration": 100,
+        "cover": "https://sun9-7.userapi.com/impf/c857236/v857236707/33b3b/-6iH7vfLl7w.jpg?size=80x80&quality=96&sign=322379032eda08806c68c17297b7e5a1&type=audio"
+    },
+    {
+        "title": "Scootin&#39; through Clocktowers Beneath the Sea",
+        "author": "Pascal Michael Stiefel",
+        "duration": 232,
+        "cover": "https://sun9-68.userapi.com/impf/c858332/v858332555/23bbcf/hjrXSGM8Qn8.jpg?size=80x80&quality=96&sign=7ed1668b5878641fbec9bccaae73ad79&type=audio"
+    },
+    {
+        "title": "Jason",
+        "author": "The Midnight feat. Nikki Flores",
+        "duration": 332
+    },
+    {
+        "title": "Bury The Light",
+        "author": "Casey Edwards",
+        "duration": 579
+    },
+    {
+        "title": "We Might Be Dead by Tomorrow",
+        "author": "Soko",
+        "duration": 161,
+        "cover": "https://sun9-30.userapi.com/impf/c857328/v857328936/20ed0b/cVLMWHq3fTU.jpg?size=80x80&quality=96&sign=9be5a4f82892c21e9d5976c9e883ce9c&type=audio"
+    },
+    {
+        "title": "Bubblaine",
+        "author": "&#20037;&#20445;&#30452;&#20154;",
+        "duration": 223
+    },
+    {
+        "title": "Super Mario: World",
+        "author": "Ending Theme",
+        "duration": 252
+    },
+    {
+        "title": "&#36986;&#12469;&#12524;&#12479;&#22580;&#25152; &#26012;&#20809;",
+        "author": "&#23713;&#37096;&#21843;&#19968;",
+        "duration": 383
+    },
+    {
+        "title": "The Soltan Syndrome",
+        "author": "Gohma &amp; ReeK",
+        "duration": 270
+    },
+    {
+        "title": "Hollow",
+        "author": "Xplosn",
+        "duration": 197
+    },
+    {
+        "title": "Without You",
+        "author": "Xplosn",
+        "duration": 210
+    },
+    {
+        "title": "Kiss Me",
+        "author": "INDX8",
+        "duration": 237,
+        "cover": "https://sun9-22.userapi.com/impf/zVzcj7jkQ1WZvy_IdQiRO0vFdtuP8silfkxzEA/yfTE6hhasW8.jpg?size=80x80&quality=96&sign=6a13ddbe61a164b3fbcfab58ad57ddf3&type=audio"
+    },
+    {
+        "title": "Have Faith In Me",
+        "author": "Moonboy",
+        "duration": 215,
+        "subtitle": "SAEV Remix"
+    },
+    {
+        "title": "Cra$H",
+        "author": "Blood Eyes",
+        "duration": 264
+    },
+    {
+        "title": "Take You Higher",
+        "author": "Agrume",
+        "duration": 303
+    },
+    {
+        "title": "Ah! Ah!Ah! Ah!",
+        "author": "Agrume",
+        "duration": 322
+    },
+    {
+        "title": "Take You Higher",
+        "author": "Agrume",
+        "duration": 302
+    },
+    {
+        "title": "RAGE",
+        "author": "Hikigaya, THRILLMANE",
+        "duration": 90,
+        "cover": "https://sun9-80.userapi.com/impf/w0ReIFaww7PchZmjnVvfKM3Mkn7fwrb9b6AJPw/uFR2DEnjn2s.jpg?size=80x80&quality=96&sign=a3f9576280ac88d40e609397d2e96810&type=audio"
+    },
+    {
+        "title": "Memphis doom",
+        "author": "Kordhell",
+        "duration": 155,
+        "cover": "https://sun9-78.userapi.com/impf/ET0ByJ9MukR5hJSzFOYdJ74veaSsrF1NQJksPg/TCx_PvUM8e4.jpg?size=80x80&quality=96&sign=767ce172fdf4f53400b4767ca9e1ac69&type=audio"
+    },
+    {
+        "title": "Stickerbrush Symphony",
+        "author": "Donkey Kong Country 2: Diddy&#39;s Kong Quest",
+        "duration": 263
+    },
+    {
+        "title": "Redbone",
+        "author": "Childish Gambino",
+        "duration": 207,
+        "subtitle": "Radio Edit"
+    },
+    {
+        "title": "Would I Lie to You",
+        "author": "Charles &amp; Eddie",
+        "duration": 218,
+        "cover": "https://sun9-6.userapi.com/impg/SJtJ2MYCBM8cG2nLG01w0wCHQZ3Ml5x2B7sCRA/1aA6Mg_0HGo.jpg?size=80x80&quality=95&sign=15588be51097953c74ad1230c0ab13fe&type=audio"
+    },
+    {
+        "title": "HEAT",
+        "author": "DIESEL &amp; Crankdat",
+        "duration": 195
+    },
+    {
+        "title": "Ramune",
+        "author": "Heartless The Monster feat. Olivia Lor&#233;n, Quentin Arispe",
+        "duration": 215,
+        "cover": "https://sun9-80.userapi.com/impf/c851524/v851524639/4e477/h5YxMc82Dro.jpg?size=80x80&quality=96&sign=1621f71cfb9e3065528d5dd35d9481ab&type=audio"
+    },
+    {
+        "title": "Thinkin&#39; of U.",
+        "author": "Snail&#39;s House",
+        "duration": 145,
+        "cover": "https://sun9-19.userapi.com/impf/Z8nDmaMoER7YkzXV_Y9oQ-VKA6J26RqqiK3mZg/6z6TiyYjfKo.jpg?size=80x80&quality=96&sign=ef1c4fa7c32d83d0e1ec1eaebd30ae6f&type=audio"
+    },
+    {
+        "title": "Bouquet",
+        "author": "Snail&#39;s House",
+        "duration": 149,
+        "cover": "https://sun9-51.userapi.com/impf/s6JSBGkqmYM7ftIqsJs-8A-oU9mgeOyE3-lirw/jiMyErdXar0.jpg?size=80x80&quality=96&sign=ab6d718df03d8bfda0e6c8461b02be50&type=audio"
+    },
+    {
+        "title": "&#12354;&#12417;&#12354;&#12364;&#12426;&#12398;&#12358;&#12383;",
+        "author": "Snail&#39;s House",
+        "duration": 158,
+        "cover": "https://sun9-51.userapi.com/impf/s6JSBGkqmYM7ftIqsJs-8A-oU9mgeOyE3-lirw/jiMyErdXar0.jpg?size=80x80&quality=96&sign=ab6d718df03d8bfda0e6c8461b02be50&type=audio"
+    },
+    {
+        "title": "Ma Chouchoute",
+        "author": "Snail&#39;s House",
+        "duration": 188,
+        "cover": "https://sun9-73.userapi.com/impf/c858332/v858332517/23cf47/RGck0rg-wYg.jpg?size=80x80&quality=96&sign=e590cbf5a1ac59033b62cd47d8afbf5a&type=audio"
+    },
+    {
+        "title": "&#12521;&#12539;&#12512;&#12539;&#12493;",
+        "author": "Snail&#39;s House",
+        "duration": 215,
+        "cover": "https://sun9-19.userapi.com/impf/Z8nDmaMoER7YkzXV_Y9oQ-VKA6J26RqqiK3mZg/6z6TiyYjfKo.jpg?size=80x80&quality=96&sign=ef1c4fa7c32d83d0e1ec1eaebd30ae6f&type=audio"
+    },
+    {
+        "title": "Break The Silence",
+        "author": "Richard Caddock, WRLD, Nitro Fun, Subtact, Slips &amp; Slurs",
+        "duration": 273
+    },
+    {
+        "title": "Everything",
+        "author": "WRLD",
+        "duration": 259,
+        "subtitle": "feat. Ashdown"
+    },
+    {
+        "title": "Hang Up",
+        "author": "WRLD",
+        "duration": 199,
+        "subtitle": "feat. Savoi"
+    },
+    {
+        "title": "Little Too Close ",
+        "author": "WRLD",
+        "duration": 244
+    },
+    {
+        "title": "Set Me Free",
+        "author": "Prolix feat. Renny Carroll",
+        "duration": 319,
+        "cover": "https://sun9-17.userapi.com/impf/c855136/v855136743/5fcec/FA3nbwYn-kA.jpg?size=80x80&quality=96&sign=63e4885e7dec4eabc2f98b5d2b1f05c7&type=audio"
+    },
+    {
+        "title": "The Message",
+        "author": "Prolix, Black Sun Empire",
+        "duration": 320,
+        "cover": "https://sun9-17.userapi.com/impf/c855136/v855136743/5fcec/FA3nbwYn-kA.jpg?size=80x80&quality=96&sign=63e4885e7dec4eabc2f98b5d2b1f05c7&type=audio"
+    },
+    {
+        "title": "Mean Streets",
+        "author": "Prolix",
+        "duration": 388
+    },
+    {
+        "title": "Subterranean",
+        "author": "Prolix",
+        "duration": 243,
+        "cover": "https://sun9-22.userapi.com/impf/Z498l5qsyVVNxOqccDyCohkOqwjMFHQ2vzNRaQ/tXyTo6V577g.jpg?size=80x80&quality=96&sign=cfde145e5b254bae87e2b8cbcad1b3b2&type=audio"
+    },
+    {
+        "title": "Rocket Fuel",
+        "author": "Prolix",
+        "duration": 258,
+        "cover": "https://sun9-46.userapi.com/impf/_EWitZ7QxTL0U2-rsfQD_WhOnHsBs9i1Y40cOg/appLLZ_tVwg.jpg?size=80x80&quality=96&sign=82bf327a01f8c97148b3e30e9e9f405b&type=audio"
+    },
+    {
+        "title": "Beat Down",
+        "author": "Prolix, DC Breaks",
+        "duration": 322,
+        "cover": "https://sun9-62.userapi.com/impf/c851532/v851532312/67e/HjOzWArq2iA.jpg?size=80x80&quality=96&sign=5c34afb59a2b242a5a079047325b2457&type=audio"
+    },
+    {
+        "title": "SWEET LIME",
+        "author": "Mord Fustang",
+        "duration": 227,
+        "cover": "https://sun9-65.userapi.com/impf/RthrigVkyuuURRDrIQKTTEUNjobA-Y3dcKtfpA/NQfR8hCbF8g.jpg?size=80x80&quality=96&sign=1862677593b462d9e1ec20a04b8fc69c&type=audio"
+    },
+    {
+        "title": "Grandfathers&#39;s Song",
+        "author": "Tyurgen Kam",
+        "duration": 298
+    },
+    {
+        "title": "Braindance VIP",
+        "author": "KROWW",
+        "duration": 181
+    },
+    {
+        "title": "Ночь",
+        "author": "Пророк Санбой (AI COVER)",
+        "duration": 222,
+        "isRussian": true,
+        "subtitle": "А. Губин"
+    },
+    {
+        "title": "Degenerates",
+        "author": "Virtual Riot",
+        "duration": 276,
+        "cover": "https://sun9-75.userapi.com/impf/aXvGIyHT6w-LWLkGSbfejygwasem6K8v-qEPxQ/Sf06u1xIf-c.jpg?size=80x80&quality=96&sign=78ddb833ecf9d754b3d5c3a31bc17388&type=audio"
+    },
+    {
+        "title": "Say It",
+        "author": "Ace Aura &amp; SpaceYeti",
+        "duration": 184
+    },
+    {
+        "title": "Raise Hell",
+        "author": "RUVLO",
+        "duration": 181
+    },
+    {
+        "title": "Rise",
+        "author": "Excision &amp; Jessica Audiffred ",
+        "duration": 222,
+        "subtitle": "feat. Leah Culver"
+    },
+    {
+        "title": "Bumpy Teeth",
+        "author": "Zeds Dead, Subtronics",
+        "duration": 252,
+        "cover": "https://sun9-35.userapi.com/impf/Ww7ZZ8i2Acb41S7m9ynT5Yqqoh8lOSbyGE_QFw/DEzmqODbvNY.jpg?size=80x80&quality=96&sign=e97b667cba58ad75d75e6f09c88afb8a&type=audio"
+    },
+    {
+        "title": "Legacy",
+        "author": "Dirty Palm, Benix",
+        "duration": 159,
+        "cover": "https://sun9-12.userapi.com/impf/C-7KOF8G_feoSdOFin_OHIYYF5dUyWO4cLIVAA/PIIlrrnRzG4.jpg?size=80x80&quality=96&sign=a63467dbef601e734e740335473bad37&type=audio"
+    },
+    {
+        "title": "Restraint ",
+        "author": "Wooli · Calcium",
+        "duration": 144
+    },
+    {
+        "title": "Cryothyst",
+        "author": "Poixone",
+        "duration": 240
+    },
+    {
+        "title": "Bedtime Blues",
+        "author": "Alien Thunder X Doctor Chubs",
+        "duration": 182
+    },
+    {
+        "title": "No Beef (feat. Miss Palmer)",
+        "author": "Afrojack, Steve Aoki feat. Miss Palmer",
+        "duration": 192,
+        "cover": "https://sun9-27.userapi.com/impf/U3eX1lzONmtithFqZhj9p-bLQVzk-nISAjkq_Q/RuqmGTqhYG4.jpg?size=80x80&quality=96&sign=91a2e4b06c143a380f7ee5d736a476ac&type=audio",
+        "subtitle": "Riot Ten & Crankdat Remix"
+    },
+    {
+        "title": "Drop That",
+        "author": "Geoxor",
+        "duration": 248,
+        "subtitle": "Unreleased"
+    },
+    {
+        "title": "Get Real",
+        "author": "ECRAZE",
+        "duration": 217,
+        "subtitle": "Bizo &amp; Dr. Ushuu Remix"
+    },
+    {
+        "title": "Dubstep Fight Club",
+        "author": "Figure",
+        "duration": 246
+    },
+    {
+        "title": "Hirune",
+        "author": "B3LLA",
+        "duration": 231
+    },
+    {
+        "title": "Aesthetic ",
+        "author": "LOOT",
+        "duration": 243
+    },
+    {
+        "title": "Voodoo People",
+        "author": "The Prodigy",
+        "duration": 307,
+        "cover": "https://sun9-19.userapi.com/impf/QzJtoRE398sIejlBglMc2ICZSGBzyGF94CJFeQ/AfEzJwWnDUo.jpg?size=80x80&quality=96&sign=1e35ab6f07e0e415ab05c8d3abaee088&type=audio",
+        "subtitle": "Pendulum Mix"
+    },
+    {
+        "title": "Goodbye Forever - Freestyle",
+        "author": "Ayden George",
+        "duration": 270
+    },
+    {
+        "title": "Cupid",
+        "author": "Dio Brando (Ai Cover)",
+        "duration": 176
+    },
+    {
+        "title": "Stay With Me",
+        "author": "Miki Matsubara",
+        "duration": 313,
+        "subtitle": "Dio AI Cover"
+    },
+    {
+        "title": "Undefeatable",
+        "author": "Kellin Quinn",
+        "duration": 266
+    },
+    {
+        "title": "Celebrate ",
+        "author": "Pitbull",
+        "duration": 188
+    },
+    {
+        "title": "Ddos",
+        "author": "Noisecream",
+        "duration": 183,
+        "cover": "https://sun9-52.userapi.com/impf/c857520/v857520991/222b14/UxAPsStRMyc.jpg?size=80x80&quality=96&sign=f70b2edf00c909ecc2e869eeb4f8f4fb&type=audio"
+    },
+    {
+        "title": "God Hunter",
+        "author": "Noisecream",
+        "duration": 218,
+        "cover": "https://sun9-51.userapi.com/impf/c851028/v851028613/1a24ff/Io42_u_XGMs.jpg?size=80x80&quality=96&sign=7e36cc05650c1bb37a48520aff78643a&type=audio"
+    },
+    {
+        "title": "Criminal Dancer",
+        "author": "Noisecream",
+        "duration": 148,
+        "cover": "https://sun9-5.userapi.com/impf/gy26upIVsujWObM9l-OGkDRoqEyk0rxlhxlBZA/a3nmaiL5ZSM.jpg?size=80x80&quality=96&sign=481e2540a9c13daac1a849c6d262ed3b&type=audio"
+    },
+    {
+        "title": "Phantom",
+        "author": "Noisecream",
+        "duration": 126,
+        "cover": "https://sun9-46.userapi.com/impf/c858236/v858236028/1c09a/HWsLjCnn3dA.jpg?size=80x80&quality=96&sign=9cc6c861a8fb9552745b0fcb99df76f9&type=audio"
+    },
+    {
+        "title": "The Doom Party",
+        "author": "Noisecream",
+        "duration": 217,
+        "cover": "https://sun9-33.userapi.com/impf/c852016/v852016624/15c75b/Mzxs4QhOxbw.jpg?size=80x80&quality=96&sign=fc67c7dcb91c6abe76bfb160f4f2f5f6&type=audio"
+    },
+    {
+        "title": "Forced and Natural",
+        "author": "Noisecream",
+        "duration": 143,
+        "cover": "https://sun9-71.userapi.com/impf/c855336/v855336818/2423b2/f6Jry0z3OHA.jpg?size=80x80&quality=96&sign=e512657b889e29c1a6ededdceca43cea&type=audio"
+    },
+    {
+        "title": "Shadow of Light",
+        "author": "Noisecream",
+        "duration": 111,
+        "cover": "https://sun9-5.userapi.com/impf/gy26upIVsujWObM9l-OGkDRoqEyk0rxlhxlBZA/a3nmaiL5ZSM.jpg?size=80x80&quality=96&sign=481e2540a9c13daac1a849c6d262ed3b&type=audio"
+    },
+    {
+        "title": "Mist of Rage",
+        "author": "Noisecream",
+        "duration": 175,
+        "cover": "https://sun9-33.userapi.com/impf/c852016/v852016624/15c75b/Mzxs4QhOxbw.jpg?size=80x80&quality=96&sign=fc67c7dcb91c6abe76bfb160f4f2f5f6&type=audio"
+    },
+    {
+        "title": "Beast Battalion",
+        "author": "Noisecream",
+        "duration": 132,
+        "cover": "https://sun9-5.userapi.com/impf/gy26upIVsujWObM9l-OGkDRoqEyk0rxlhxlBZA/a3nmaiL5ZSM.jpg?size=80x80&quality=96&sign=481e2540a9c13daac1a849c6d262ed3b&type=audio"
+    },
+    {
+        "title": "Hit the Floor",
+        "author": "Noisecream",
+        "duration": 131,
+        "cover": "https://sun9-5.userapi.com/impf/gy26upIVsujWObM9l-OGkDRoqEyk0rxlhxlBZA/a3nmaiL5ZSM.jpg?size=80x80&quality=96&sign=481e2540a9c13daac1a849c6d262ed3b&type=audio"
+    },
+    {
+        "title": "I Want It All",
+        "author": "The Drums",
+        "duration": 294
+    },
+    {
+        "title": "Blue Bird",
+        "author": "Ikimonogakari",
+        "duration": 215
+    },
+    {
+        "title": "Kawaikute Gomen",
+        "author": "Honeyworks VOSTFR",
+        "duration": 220
+    },
+    {
+        "title": "We Could Get More Machinegun Psystyle!",
+        "author": "&#12363;&#12417;&#12426;&#12354;",
+        "duration": 327,
+        "subtitle": "And More Genre Switches"
+    },
+    {
+        "title": "Blast",
+        "author": "Alexi Action",
+        "duration": 124,
+        "cover": "https://sun9-72.userapi.com/impf/AKg_luIxxLInLpa99EXRx_4ZvSVHn9xg3Jar2w/CCIc7kHHp_s.jpg?size=80x80&quality=96&sign=c0824fe8221886194ffdcadcae939bdb&type=audio"
+    },
+    {
+        "title": "Shizophonk",
+        "author": "Infraction, Emerel Gray",
+        "duration": 97
+    },
+    {
+        "title": "Sold Out",
+        "author": "Hawk Nelson",
+        "duration": 214
+    },
+    {
+        "title": "Cyberphonk",
+        "author": "Infraction",
+        "duration": 235
+    },
+    {
+        "title": "Infraction",
+        "author": "Freaky",
+        "duration": 202
+    },
+    {
+        "title": "You Wanna Play",
+        "author": "Alexi Action",
+        "duration": 100,
+        "cover": "https://sun9-3.userapi.com/impf/oM8V_2_46B4GtG1xGVuwtOBT8X_vRcyIfqLAaA/YHhbjBJpHB0.jpg?size=80x80&quality=96&sign=d3751d549790a75b52aeff3b2be99a32&type=audio"
+    },
+    {
+        "title": "Morphogenetic Sorrow -Piano-",
+        "author": "Shinji Hosoe",
+        "duration": 268
+    },
+    {
+        "title": "05 &#25105;&#12425;&#27704;&#20037;&#12395;&#35576;&#20849;&#12395;",
+        "author": "Shinji Hosoe",
+        "duration": 176,
+        "subtitle": "One and All, Forever"
+    },
+    {
+        "title": "Soon",
+        "author": "AGST",
+        "duration": 185
+    },
+    {
+        "title": "Worse Than Death",
+        "author": "The Anti-Queens",
+        "duration": 161,
+        "cover": "https://sun9-28.userapi.com/impf/c852232/v852232293/17500a/UaJHt6uN7UY.jpg?size=80x80&quality=96&sign=990f004d6ae71c481730555ed852abb0&type=audio"
+    }
+]

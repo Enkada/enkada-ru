@@ -18,12 +18,36 @@ export function ImageViewer(props) {
     const [imageData, setImageData] = useState(null);
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
-	const { viewerImageSrc, resetViewer } = props;
+	const { viewerImageSrc, resetViewer, imageList, setViewerImageSrc } = props;
+	
+    const [neighboringImages, setNeighboringImages] = useState({ next: null, prev: null });
 
 	useEffect(() => {
 		if (viewerImageSrc) {
 			setViewerVisible(true);
 			const image = gallery.find(x => x.name == viewerImageSrc.split('/').at(-1));
+
+			if (imageList?.length) {
+				const targetImage = viewerImageSrc;
+				const targetIndex = imageList.indexOf(targetImage);
+
+				let neighboringImages = { next: null, prev: null }
+
+				if (targetIndex !== -1) {
+
+					if (targetIndex > 0) {
+						neighboringImages.prev = imageList[targetIndex - 1];
+					}
+
+					if (targetIndex < imageList.length - 1) {
+						neighboringImages.next = imageList[targetIndex + 1];
+					}
+
+					setNeighboringImages(neighboringImages);
+				} else {
+					console.log("Image not found in the array.");
+				}
+			}
 
 			if (!image) {
 				setImageData(null);
@@ -118,6 +142,8 @@ export function ImageViewer(props) {
 		};
 	}, [viewerVisible, isDragging]);
 
+	//console.log(neighboringImages);
+
 	return (<>{viewerVisible && (
 		<div className="image-viewer" ref={viewerRef} onMouseDown={handleMouseDown} style={{transform: `translate(${viewerPosition.x}px, ${viewerPosition.y}px) scale(${viewerScale})`,}}>
 			
@@ -142,6 +168,8 @@ export function ImageViewer(props) {
 				</>}
 			</div>}
 			<div className="btn-close-viewer btn--emoji" onClick={hideViewer}>✖</div>
+			{!!neighboringImages.next && <div className="btn-next" onClick={() => setViewerImageSrc(neighboringImages.next)}>{">"}</div>}
+			{!!neighboringImages.prev && <div className="btn-prev" onClick={() => setViewerImageSrc(neighboringImages.prev)}>{"<"}</div>}
 			<img src={viewerImageSrc} />
 		</div>)}
 	</>);
@@ -160,6 +188,8 @@ export default function ArticlePage() {
 
 	const [viewerImageSrc, setViewerImageSrc] = useState('');
 
+	const [articleImages, setArticleImages] = useState([]);
+
 	const showViewer = (src) => {
 		setViewerImageSrc(src);
 	};
@@ -168,20 +198,60 @@ export default function ArticlePage() {
 		setViewerImageSrc('');
 	};
 
+	const setImageList = (data) => {
+		const matches = data.match(/!\[.*?\]\((.*?)\)/g);
+
+		if (matches) {
+			const imageUrls = matches.map(match => {
+				let imageUrl = match.match(/!\[.*?\]\((.*?)\)/)[1];
+				imageUrl = imageUrl.includes("http") ? imageUrl : axios.defaults.baseURL + "/files/" + imageUrl;
+				return imageUrl;
+			});
+			
+			setArticleImages(imageUrls);
+		}
+	}
+
 	useEffect(() => {
 		const fetchArticle = async () => {
 			try {
-				const response = await axios.get(`/article/get.php?id=${id}`);
+				if (isEditor) {
+					const response = await axios.post(`/article/get.php?id=${id}`, { token: localStorage.getItem('token') }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }});
 
-				if (!response.data.error) {
-					setArticle(response.data);
-					if (!response.data.content) {
-						setIsOriginal(true);
+					if (!response.data.error) {					
+						document.title = 'Enkada – ' + response.data.title.replace(/[^-a-zA-Z0-9,'()!?"\s]/g, '').trim();
+	
+						setArticle(response.data);
+
+						setImageList(response.data.content);
+
+						if (!response.data.content) {
+							setIsOriginal(true);
+						}
+					}
+					else {
+						console.log(response.data);
+						navigate('/');
 					}
 				}
 				else {
-					console.log(response.data);
-					navigate('/');
+					const response = await axios.get(`/article/get.php?id=${id}`);
+
+					if (!response.data.error) {					
+						document.title = 'Enkada – ' + response.data.title.replace(/[^-a-zA-Z0-9,'()!?"\s]/g, '').trim();
+
+						setArticle(response.data);
+
+						setImageList(response.data.content);
+
+						if (!response.data.content) {
+							setIsOriginal(true);
+						}
+					}
+					else {
+						console.log(response.data);
+						navigate('/');
+					}
 				}
 
 			} catch (error) {
@@ -214,6 +284,11 @@ export default function ArticlePage() {
 		});
 
 		fetchArticle();
+
+		return () => {
+			document.title = 'Enkada';
+		};
+		
 	}, [id]);
 
 	if (!article) {
@@ -238,7 +313,28 @@ export default function ArticlePage() {
 		return articleTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 	}
 
+	const headerIdLink = (header) => {
+		return header.replace(/[^-а-яА-Яa-zA-Z0-9,'()!?"\s]/g, '').trim().replace(/\s/g, '_');
+	}
+
 	const { title, content, date, tags, title_ru, content_ru } = article;
+
+	function extractH2Headers(markdownText) {
+		const lines = markdownText.split('\n');
+		const h2Headers = [];
+		
+		for (const line of lines) {
+			if (line.trim().startsWith('## ')) {
+			// Remove the '##' and any leading/trailing whitespace to get the header text
+			const headerText = line.replace(/^##\s*/, '');
+			h2Headers.push(headerText);
+			}
+		}
+		
+		return h2Headers;
+	}
+
+	const headers = isOriginal ? extractH2Headers(content_ru) : extractH2Headers(content);
 
 	return (
 		<div className={`article ${isOriginal ? "article--ru" : ""}`}>
@@ -263,6 +359,13 @@ export default function ArticlePage() {
 					</React.Fragment>
 				))}
 			</div>
+			{!!(headers.length >= 2) && <div className="article__table-of-contents">
+				<div className="article__table-of-contents__header">Table of Contents</div>
+				{headers.map((header, index) => (
+					<a key={index} className="article__table-of-contents__link" href={"#" + headerIdLink(header)}>{header}</a>
+				))}
+				
+			</div>}
 			<div className="article__content">
 				<ReactMarkdown components={{
 					a: (props) => {
@@ -281,6 +384,19 @@ export default function ArticlePage() {
 							<img src={src} onClick={() => showViewer(src)} alt={props.alt}/>
 						);
 					},
+					code: (props) => {
+						if (props.children[0][0] == "!") {
+							return <span className="glitch">{props.children[0].substring(1)}</span>
+						}
+						else {
+							return <code>{props.children[0]}</code>
+						}
+					},
+					h2: (props) => {
+						return (
+							<h2 id={headerIdLink(props.children[0])}>{props.children}</h2>
+						);
+					},
 				}} remarkPlugins={[remarkGfm]}>{isOriginal ? content_ru : content}</ReactMarkdown>
 			</div>
 			{<div className="article__neighbors">
@@ -295,7 +411,7 @@ export default function ArticlePage() {
 					<div>{new Date(neighborArticles.prev.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</div>
 				</>}
 			</div>}
-			<ImageViewer viewerImageSrc={viewerImageSrc} resetViewer={resetViewer}/>
+			<ImageViewer viewerImageSrc={viewerImageSrc} setViewerImageSrc={setViewerImageSrc} imageList={articleImages} resetViewer={resetViewer}/>
 		</div>
 	);
 }

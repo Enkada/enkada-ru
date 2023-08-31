@@ -20,9 +20,13 @@ export default function MainPage() {
         };
 
         fetchArticles();
-    }, []);
+    }, []);    
 
-    const lastArticle = articles[0];
+    const lastArticle = articles[0] || {
+        "title": "🎲 Something",
+        "date": "1984-08-31",
+        "tags": "[\"Giraffe\", \"Cookie\"]"
+    };
 
     const convertToURL = (articleTitle) => {
         return articleTitle.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -32,28 +36,29 @@ export default function MainPage() {
         <>
         <div className="section" style={{"--index": 0}}>
             <div className="section__header">What's this website?</div>
-            <div className="section__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, qui. Iure, libero sed. Aspernatur itaque consequuntur, at commodi ipsum dolor eius laborum dolores iusto id autem! Soluta itaque eum tempora, autem rem magni maxime. Rem delectus assumenda deserunt quidem ut aperiam, repellendus, voluptate omnis explicabo possimus vitae eveniet harum quis.</p>
+            <div className="section__content welcome">
+                <p>Welcome to my chaotic corner of the Internet. This place? It's a mind dump. A vortex of unfiltered, unadulterated thoughts straight from the depths of my soul. This is where I unleash my thoughts, rants, ramblings, and reflections on this digital abyss.</p>
+                <p>It's also a portfolio of my digital conquests. I showcase projects that I've painstakingly crafted with lines of code and endless coke bottles.</p>
             </div>
         </div>
         {!!(lastArticle) &&
         <div className="section" style={{"--index": 1}}>
             <div className="section__header">Last Article</div>
             <div className="section__content">
-                <div className="article-list">
+                <div className="article-list single-line">
                     <div className="article-list__year-group" style={{"--index": 0}}>
                         <div className="article-list__year-group__item-list">
                             <Link to={"/article/" +  lastArticle.id + "/" + convertToURL(lastArticle.title)} className="article-link" style={{"--index": 0}}>
                                 <div className="article-link__info">
-                                    <div className="article-link__title">{lastArticle.title}</div>
+                                    <div className={`article-link__title ${lastArticle.id ? "" : "skeleton-text"}`}>{lastArticle.title}</div>
                                     <div className="article-link__tag-list">
                                     {JSON.parse(lastArticle.tags).map((tag, index) => (
-                                        <div className="tag" key={index}>{tag}</div>
+                                        <div className={`tag ${lastArticle.id ? "" : "skeleton-text"}`}key={index}>{tag}</div>
                                     ))}
                                     </div>
                                 </div>                                
-                                <div className="article-link__date  article-link__date--long">{new Date(lastArticle.date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric" })}</div>
-                                <div className="article-link__date article-link__date--short">{new Date(lastArticle.date).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric" })}</div>
+                                <div className={`article-link__date article-link__date--long ${lastArticle.id ? "" : "skeleton-text"}`}>{new Date(lastArticle.date).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric" })}</div>
+                                <div className={`article-link__date article-link__date--short ${lastArticle.id ? "" : "skeleton-text"}`}>{new Date(lastArticle.date).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric" })}</div>
                             </Link>
                         </div>
                         

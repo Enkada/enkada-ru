@@ -22,7 +22,7 @@ export default function PostEditorPage() {
 
     useEffect(() => {
         if (isEditing) {
-            axios.get(`/article/get.php?id=${id}`).then(response => {
+            axios.post(`/article/get.php?id=${id}`, { token: localStorage.getItem('token') }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).then(response => {
                 const articleData = response.data;
                 setTitle(articleData.title);
                 setTitleRu(articleData.title_ru);
@@ -164,7 +164,7 @@ export default function PostEditorPage() {
                     <input type="text" value={titleRu} onChange={e => setTitleRu(e.target.value)}/>
                     <textarea value={contentRu} ref={textareaRefRu} onChange={handleContentRuChange} rows="5"></textarea>
                 </div>
-                <FileViewer/>
+                <FileViewer title={title}/>
                 <div className="tag-input">
                     <div className="tag-input__list">
                         {tags.map((tag, index) => (

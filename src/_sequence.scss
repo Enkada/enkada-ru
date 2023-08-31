@@ -1,0 +1,85 @@
+
+
+.sequence {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em;
+    
+    align-items: start;
+    justify-items: center;
+
+    &__input, button, &__status {
+        grid-column: 1 / span 2;
+    }
+
+    &__input, button {
+        width: 150px;
+        text-align: center;
+    }
+
+    &__input {
+        letter-spacing: 4px;
+    }
+
+    &__grid {
+        display: flex;
+        gap: .5em;
+
+        &__col {
+            display: grid;
+            gap: .5em;
+
+            &:not(:last-child) {
+                padding-right: .5em;
+                border-right: 1px solid var(--clr-border);
+            }
+        }
+    }
+
+    
+
+    span {
+        cursor: pointer;
+
+        &.logged-out {
+            color: rgb(56, 56, 170);
+            text-decoration: line-through;
+            cursor: default;
+        }
+
+        &.assumed {
+            color: red;
+            scale: 1.1;
+        }
+
+        &.assumed-out {
+            color: rgb(104, 0, 0);
+            text-decoration: line-through;
+        }
+    }
+
+    strike {
+        opacity: 0.5;
+    }
+
+    &__log {
+        display: grid;
+        gap: .5em;
+
+        &__row {
+            display: flex;
+            gap: .5em;
+
+            &__number {
+                display: flex;
+                gap: .25em;
+
+                &::after {
+                    margin-left: .5em;
+                    content: "->";
+                    color: var(--clr-subtext);
+                }
+            }
+        }
+    }
+}

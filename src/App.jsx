@@ -10,7 +10,11 @@ import LoginPage from './pages/LoginPage'
 import MainPage from './pages/MainPage'
 import PostEditorPage from './pages/PostEditorPage'
 import ProjectsPage from './pages/ProjectsPage'
+import { SequenceGamePage } from './pages/SequenceGamePage'
 import TagEditorPage from './pages/TagEditorPage'
+import TimelinePage from './pages/TimelinePage'
+import { TimetablePage } from './pages/TimetablePage'
+import VKMusicPage from './pages/VKMusicPage'
 import { UserContextProvider } from './UserContext'
 
 function App() {
@@ -29,6 +33,10 @@ function App() {
 				<Route path="/projects" element={<ProjectsPage/>}/>
 				<Route path="/gallery" element={<GalleryPage/>}/>
 				<Route path="/about" element={<AboutPage/>}/>
+				<Route path="/music" element={<VKMusicPage/>}/>
+				<Route path="/timeline" element={<TimelinePage/>}/>	
+				<Route path="/timetable" element={<TimetablePage/>}/>				
+				<Route path="/sequence" element={<SequenceGamePage/>}/>
 				<Route path="/article/:id" element={<ArticlePage/>}/>
 				<Route path="/article/:id/:title" element={<ArticlePage/>}/>
 				<Route path="*" element={<Error404Page/>}/>

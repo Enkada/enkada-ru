@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 
-export default function FileViewer() {
+export default function FileViewer(props) {
     const fileInputRef = useRef(null);
     const [files, setFiles] = useState([]);
     const [gallery, setGallery] = useState([]);
+    const [articles, setArticles] = useState([]);
+
+    const [articleTitle, setArticleTitle] = useState("My Image");
     
     const [imageToUpload, setImageToUpload] = useState(null);
     const [imageSrc, setImageSrc] = useState('');
@@ -34,12 +37,19 @@ export default function FileViewer() {
     };
 
     useEffect(() => {
+        axios.get('/article/get-all.php').then((response) => {
+            setArticles(response.data);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+
         fetchFiles();
     }, []);
 
     const fetchFiles = () => {
         axios.get('/upload/get.php').then((response) => {
-            setFiles(response.data.files);
+            setFiles(response.data.files.sort());
             setGallery(response.data.gallery);
         })
         .catch((error) => {
@@ -92,6 +102,7 @@ export default function FileViewer() {
     const uploadFile = (file) => {
         const formData = new FormData();
         formData.append('file', file);
+        formData.append("token", localStorage.getItem('token'));
 
         axios.post('/upload/add.php', formData).then((response) => {
             // Handle successful upload response
@@ -120,20 +131,27 @@ export default function FileViewer() {
     };
 
     const getFileTitle = (fileName) => {
-        return gallery.find(x => x.name == fileName)?.title ?? "My Image";
+        return gallery.find(x => x.name == fileName)?.title ?? (props?.title?.replace(/[^-a-zA-Z0-9,'()!?"\s]/g, '').trim() ?? "My Image");
     };
 
     const fileGroups = files.reduce((categories, fileName, index) => {
         const extension = fileName.split('.').pop();
 
         if (['png', 'jpeg', 'jpg', 'gif'].includes(extension)) {
-            categories.images.push(
-                <div key={index} className='file file--image'>
-                    <img src={axios.defaults.baseURL + "/files/" + fileName}/>
-                    <div className='btn-file btn-file--delete' onClick={() => handleDelete(fileName)}>✖</div>
-                    <div className='btn-file btn-file--copy' onClick={() => handleCopyClick(`![${getFileTitle(fileName)}](${fileName})`)}>💾</div>
-                </div>
-            );
+            const isUsed = articles.filter(x => x.content.includes(fileName) || x.content_ru.includes(fileName)).length > 0;
+
+            const image = <div key={index} className={`file file--image`}>
+                <img src={axios.defaults.baseURL + "/files/" + fileName}/>
+                <div className='btn-file btn-file--delete' onClick={() => handleDelete(fileName)}>✖</div>
+                <div className='btn-file btn-file--copy' onClick={() => handleCopyClick(`![${getFileTitle(fileName)}](${fileName})`)}>💾</div>
+            </div>
+
+            if (isUsed) {
+                categories.images.used.push(image);
+            }
+            else {   
+                categories.images.unused.push(image);
+            }
         } else if (['.mp4', '.webm'].includes(extension)) {
             categories.videos.push(
                 <div key={index} className='file file--video'>
@@ -152,7 +170,7 @@ export default function FileViewer() {
         }
 
         return categories;
-    }, { images: [], videos: [], other: [] })
+    }, { images: { used: [], unused: []}, videos: [], other: [] })
 
     const [activeTab, setActiveTab] = useState(0);
 
@@ -214,7 +232,10 @@ export default function FileViewer() {
                     <button onClick={handleClick}>Upload File</button>
                 </div>
                 <div className="file-viewer__tab-control__content">
-                {activeTab === 0 && fileGroups.images}
+                {activeTab === 0 && <>
+                    <div className='image-group image-group--unused'>{fileGroups.images.unused}</div>
+                    <div className='image-group image-group--used'>{fileGroups.images.used}</div>
+                </>}
                 {activeTab === 1 && fileGroups.videos}
                 {activeTab === 2 && fileGroups.other}
                 </div>

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from 'axios';
 import { ImageViewer } from "./ArticlePage";
+import ProgressiveImg from "../ProgressiveImg";
 
 export default function GalleryPage() {
     
@@ -8,6 +9,8 @@ export default function GalleryPage() {
     const [gallery, setGallery] = useState([]);
 
     const [viewerImageSrc, setViewerImageSrc] = useState('');
+    
+	const [imageList, setImageList] = useState([]);
 
 	const showViewer = (src) => {
 		setViewerImageSrc(src);
@@ -31,11 +34,17 @@ export default function GalleryPage() {
                     if(!parent?.children) {
                         parent.children = [];
                     }
+                    item.date = parent.date;
+                    item.title = parent.title;
                     parent.children.push(item);
                 }
             });
 
-            setGallery(groupByYearAndMonth(response.data.gallery.filter(x => x.parent == 0).sort((a, b) => (b.date > a.date ? 1 : -1))));
+            const filtered = response.data.gallery.filter(x => x.parent == 0).sort((a, b) => (b.date > a.date ? 1 : -1));
+
+            // Some super advanced array manipulations
+            setImageList(filtered.flatMap(obj => [obj.name, ...(obj.children || []).map(child => child.name)]).map(x => x.includes("http") ? x : axios.defaults.baseURL + "/files/" + x));
+            setGallery(groupByYearAndMonth(filtered));
         })
         .catch((error) => {
             console.error(error);
@@ -53,11 +62,11 @@ export default function GalleryPage() {
             const month = date.toLocaleString('default', { month: 'long' });
 
             if (!groupedData[year]) {   
-            groupedData[year] = {};
+                groupedData[year] = {};
             }
 
             if (!groupedData[year][month]) {
-            groupedData[year][month] = [];
+                groupedData[year][month] = [];
             }
 
             groupedData[year][month].push(item);
@@ -85,11 +94,11 @@ export default function GalleryPage() {
                             <div className="gallery__month__image-list">
                                 {gallery[year][month].map((image, index) => (
                                     <React.Fragment key={index}>{!image.children ? 
-                                        <img src={axios.defaults.baseURL + "/files/" + image.name} alt={image.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + image.name)}/>: 
+                                        <ProgressiveImg src={axios.defaults.baseURL + "/files/" + image.name} alt={image.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + image.name)}/>: 
                                         <div className="gallery__image-block">
-                                            <img src={axios.defaults.baseURL + "/files/" + image.name} alt={image.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + image.name)}/>
+                                            <ProgressiveImg src={axios.defaults.baseURL + "/files/" + image.name} alt={image.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + image.name)}/>
                                             {image.children.map((child, index) => (
-                                                <img key={index} src={axios.defaults.baseURL + "/files/" + child.name} alt={child.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + child.name)}/>
+                                                <ProgressiveImg key={index} src={axios.defaults.baseURL + "/files/" + child.name} alt={child.title} onClick={() => showViewer(axios.defaults.baseURL + "/files/" + child.name)}/>
                                             ))}
                                         </div>}
                                     </React.Fragment>
@@ -102,7 +111,7 @@ export default function GalleryPage() {
             </div>
         </div>
         
-        <ImageViewer viewerImageSrc={viewerImageSrc} resetViewer={resetViewer} galleryData={gallery}/>
+        <ImageViewer viewerImageSrc={viewerImageSrc} setViewerImageSrc={setViewerImageSrc} imageList={imageList} resetViewer={resetViewer} galleryData={gallery}/>
         </>        
     );
 }
